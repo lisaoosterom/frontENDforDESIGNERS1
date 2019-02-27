@@ -1,13 +1,24 @@
-console.log("test");
-var filmTitel = document.querySelector('h3');
-console.log(filmTitel);
-var afbeeldingFilm = document.querySelector('article main');
-console.log(afbeeldingFilm);
+    // Get the checkbox
+    var checkBox = document.getElementById("film1HEART1");
+    // Get the output text
+    // var faveFilm =
+    //   document.getElementsByClassName('favoFilm');
 
-function hideShowTitel() {
 
-    filmTitel.classList.toggle('filmTitelShow');
+    console.log('test');
+    console.log(checkBox);
+    console.log(faveFilm);
 
-}
 
-afbeeldingFilm.addEventListener("mouseover", hideShowTitel, false);
+
+    function addFilmFucntion() {
+        if (checkBox.checked == true) {
+            verstuurKnop.classList.add('favoFilmClass');
+        } else {
+            verstuurKnop.classList.remove('favoFilm');
+        }
+
+    }
+
+
+    checkBox.addEventListener("click", addFilmFucntion, false);

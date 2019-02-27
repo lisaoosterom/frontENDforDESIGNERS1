@@ -11,6 +11,7 @@ sans-serif;
 nav {
     background-color: #000;
     width: 100%;
+    padding: 3em;
 }
 
 nav ul {
@@ -50,51 +51,86 @@ li img {
 .filmContainer {
     display: flex;
     flex-direction: row;
+    padding: 2%;
 }
 
-.filmContainer img {
+@media screen and (max-width: 25px) {
+    .filmContainer {
+        overflow: auto;
+    }
+}
+
+.filmContainer main img {
     width: 19em;
     height: 25em;
     margin: 1em;
 }
 
-.filmContainer h2 {
-    display: block;
-    float: left;
+header h2 {
+text-align: center;
 }
 
 
 /* hoover titel / like button
 ----------------------------------------- */
 
-article h3 {
-    position: relative;
-    top: -21em;
-    left: 2em;
+.favoFilm {
+    opacity: 0;
+
 }
 
+.favoFilmClass {
+    opacity: 1;
+
+}
+
+
+
 article input[type=checkbox] {
+    width: 100%;
     visibility: hidden;
 }
 
 article input[type=checkbox]+label {
+    background-color: #D3F1F5;
+    border-radius: 100%;
     background-image: url(../icons/favoInactive.svg);
+    width: 2em;
+    height: 2em;
     background-repeat: no-repeat;
-    background-size: 3em;
-    position: relative;
-    top: -8em;
-    left: 15em;
-    z-index: 100;
+    margin-left: 16em;
+    position: absolute;
+    top: 78%;
+    opacity: 0;
 }
 
-h3 {
-    visibility: hidden;
+article:hover input[type=checkbox]+label {
+    opacity: 1;
 }
 
-filmTitelShow {
-    opacity: 0.9;
-    position: relative;
-    top: 3%;
-    width: 100%;
-    height: 100%;
+article:hover input[type=checkbox]:checked+label {
+    background-image: url(../icons/favoActive.svg);
 }
+
+article {
+    opacity: 1;
+}
+
+article h3 {
+    position: relative;
+    top: -21em;
+    left: 2em;
+    opacity: 0;
+    color: #fff;
+    font: 'Source Sans Pro';
+}
+
+article:hover {
+    opacity: 0.5;
+}
+
+article:hover h3 {
+    opacity: 1;
+}
+
+
