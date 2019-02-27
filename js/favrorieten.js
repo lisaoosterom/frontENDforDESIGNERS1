@@ -1,24 +1,18 @@
     // Get the checkbox
     var checkBox = document.getElementById("film1HEART1");
     // Get the output text
-    // var faveFilm =
-    //   document.getElementsByClassName('favoFilm');
+    var faveFilmContainer =
+        document.getElementsByClassName("favoFilmContainer");
 
 
     console.log('test');
     console.log(checkBox);
-    console.log(faveFilm);
+    console.log(faveFilmContainer);
 
 
 
     function addFilmFucntion() {
-        if (checkBox.checked == true) {
-            verstuurKnop.classList.add('favoFilmClass');
-        } else {
-            verstuurKnop.classList.remove('favoFilm');
-        }
+        faveFilmContainer.classList.add('favoFilmClass');
 
     }
-
-
-    checkBox.addEventListener("click", addFilmFucntion, false);
+    checkBox.addEventListener('click', addFilmFucntion, false);

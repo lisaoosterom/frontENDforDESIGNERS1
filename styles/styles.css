@@ -1,5 +1,6 @@
 body {
     font-size: 16px;
+    font-family: sans-serif;
 }
 
 font-family: 'Source Sans Pro',
@@ -67,24 +68,12 @@ li img {
 }
 
 header h2 {
-text-align: center;
+    text-align: center;
 }
 
 
 /* hoover titel / like button
 ----------------------------------------- */
-
-.favoFilm {
-    opacity: 0;
-
-}
-
-.favoFilmClass {
-    opacity: 1;
-
-}
-
-
 
 article input[type=checkbox] {
     width: 100%;
@@ -112,25 +101,41 @@ article:hover input[type=checkbox]:checked+label {
     background-image: url(../icons/favoActive.svg);
 }
 
-article {
+
+/* normale container
+----------------------------------------- */
+
+.filmContainer article {
     opacity: 1;
 }
 
-article h3 {
+.filmContainer article h3 {
     position: relative;
     top: -21em;
     left: 2em;
     opacity: 0;
     color: #fff;
-    font: 'Source Sans Pro';
 }
 
-article:hover {
+.filmContainer article:hover {
     opacity: 0.5;
 }
 
-article:hover h3 {
+.filmContainer article:hover h3 {
     opacity: 1;
 }
 
 
+/* favoriten container
+----------------------------------------- */
+
+.favoFilmContainer {
+    width: 19em;
+    height: 25em;
+    margin: 1em;
+    opacity: 0;
+}
+
+.favoFilmClass {
+    opacity: 1;
+}
